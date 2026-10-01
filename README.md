@@ -78,7 +78,7 @@ This command updates the package information and installs Nikto on Kali Linux.
 
 ### 📸 Terminal Evidence
 
-![Nikto installation](1000521170.jpg)
+![Nikto installation](IMG_20261001_105949_413.jpg)
 
 ---
 
@@ -104,7 +104,7 @@ This command displays the installed Nikto version and confirms that Nikto is ava
 
 ### 📸 Terminal Evidence
 
-![Nikto version](1000521171.jpg)
+![Nikto version](IMG_20261001_105952_144.jpg)
 
 ---
 
@@ -155,7 +155,7 @@ Replace `TARGET` with the hostname or IP address of your authorized lab server.
 
 The following screenshot shows example Nikto scan output, including target information and server response details.
 
-![Nikto scan output](1000521172.jpg)
+![Nikto scan output](IMG_20261001_105953_252.jpg)
 
 ---
 
@@ -262,19 +262,19 @@ nikto-web-server-scan/
 
 ### Installation
 
-![Nikto installation screenshot](1000521170.jpg)
+![Nikto installation screenshot](IMG_20261001_105949_413.jpg)
 
 ---
 
 ### Version & Help
 
-![Nikto version and help screenshot](1000521171.jpg)
+![Nikto version and help screenshot](IMG_20261001_105952_144.jpg)
 
 ---
 
 ### Scan Output
 
-![Nikto scan output screenshot](1000521172.jpg)
+![Nikto scan output screenshot](IMG_20261001_105953_252.jpg)
 
 </details>
 
