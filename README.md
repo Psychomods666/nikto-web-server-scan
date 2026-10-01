@@ -1,91 +1,159 @@
-Nikto Web Server Scanning – Basic Security Testing
+# 🔎 Nikto Web Server Security Scanning
 
-Nikto Platform Purpose
+Basic web server security assessment using **Nikto on Kali Linux**
 
-📌 Overview
-
-This project documents a basic Nikto web server security assessment performed using Kali Linux.
-
-Nikto is an open-source web server scanner that checks web servers for potentially interesting files, outdated components, insecure configurations, and other commonly known issues.
-
-> ⚠️ Legal & Ethical Notice: Only scan websites, servers, or applications that you own or have explicit permission to test. The screenshots are provided as a learning demonstration.
-
-
-
+![Nikto](https://img.shields.io/badge/Tool-Nikto-blue)
+![Kali Linux](https://img.shields.io/badge/OS-Kali%20Linux-black)
+![Cybersecurity](https://img.shields.io/badge/Skill-Cybersecurity-red)
+![Web Security](https://img.shields.io/badge/Skill-Web%20Security-orange)
+![Security Testing](https://img.shields.io/badge/Type-Security%20Testing-green)
 
 ---
 
-🛠️ Tool Used
+## 📌 Project Overview
 
-Tool: Nikto
+This project demonstrates the basic use of **Nikto**, an open-source web server scanner used during security assessments.
 
-Version: 2.6.1
+The practical covers:
 
-Operating System: Kali Linux
+1. Installing Nikto on Kali Linux.
+2. Checking the installed Nikto version.
+3. Understanding Nikto command-line options.
+4. Performing a basic web server scan.
+5. Understanding and interpreting scanner output.
 
-Interface: Terminal
+Nikto is commonly used during the reconnaissance and vulnerability-assessment stages of an authorized security assessment.
 
-
+> ⚠️ **Important:** Nikto should only be used against systems that you own or have explicit permission to test.
 
 ---
 
-🚀 Installation
+## 🎯 Objectives
 
-Nikto can be installed on Kali Linux using:
+- Install Nikto on Kali Linux.
+- Verify the Nikto installation.
+- Learn basic Nikto commands.
+- Understand important command-line options.
+- Perform a basic authorized web server scan.
+- Identify information returned by the scanner.
+- Understand that automated findings require manual verification.
 
+---
+
+## 🛠️ Tools & Technologies
+
+| Tool | Purpose |
+|---|---|
+| Kali Linux | Security testing environment |
+| Nikto | Web server scanner |
+| Terminal | Command-line interface |
+
+---
+
+## 🛡️ Scope & Authorization
+
+| Phase | Target | Authorization |
+|---|---|---|
+| Installation | Local Kali Linux system | Own system |
+| Nikto Testing | Authorized lab/test server | Explicit permission |
+
+> ⚠️ **Important:** Security scanning must only be performed against systems you own or have explicit authorization to test.
+
+---
+
+# 🧪 Part 1 — Nikto Installation
+
+## Task 1 — Install Nikto
+
+### Command
+
+```bash
 sudo apt update
 sudo apt install -y nikto
 
-Check the installed version:
+Explanation
+
+This command updates the package information and installs Nikto on Kali Linux.
+
+Screenshot
+
+Nikto Installation
+
+
+---
+
+🔍 Part 2 — Verify Nikto Installation
+
+Task 2 — Check Nikto Version
+
+Command
 
 nikto -Version
 
-Example:
+Example Output
 
 Nikto 2.6.1 (LW 2.5)
 
+Explanation
+
+This command displays the installed Nikto version and confirms that Nikto is available on the system.
+
+Screenshot
+
+Nikto Version
+
 
 ---
 
-📖 Help & Options
+📖 Part 3 — Nikto Help & Options
 
-To view Nikto's available options:
+Task 3 — View Nikto Commands
+
+Command
 
 nikto -h
 
-Some commonly used options:
+Explanation
 
-Option	Purpose
+The -h option displays Nikto's available command-line options.
 
--h	Display help / specify host
+Some useful options include:
+
+Option	Description
+
+-h	Display help / specify target
 -Version	Display Nikto version
--url	Specify target URL/host
--p	Specify port
+-url	Specify target URL
+-p	Specify target port
 -ssl	Force SSL mode
--output	Save scan results to a file
+-output	Save results to a file
 
 
 
 ---
 
-🔍 Basic Scan
+🌐 Part 4 — Basic Web Server Scan
 
-For an authorized lab target, a basic scan can be started with:
+Task 4 — Scan an Authorized Target
+
+For an authorized lab or test server:
+
+HTTP
 
 nikto -h http://TARGET
 
-For HTTPS:
+HTTPS
 
 nikto -h https://TARGET
 
-Replace TARGET with a host that you are authorized to assess.
+Replace TARGET with the hostname or IP address of a system you are authorized to test.
 
 
 ---
 
-🧪 Scan Result Example
+🧪 Example Scan Output
 
-During the demonstration, Nikto displayed information such as:
+A Nikto scan can provide information such as:
 
 Target IP address
 
@@ -93,16 +161,18 @@ Target hostname
 
 Target port
 
-Web server/platform information
-
-Multiple IP addresses
+Web server information
 
 HTTP response information
 
-CGI directory test status
+Multiple IP addresses
+
+CGI directory information
+
+Potentially interesting server configurations
 
 
-Example:
+Example
 
 - Nikto v2.6.1
 
@@ -112,61 +182,53 @@ Example:
 + Platform:         Unknown
 + Server:           ...
 
-Important
+Screenshot
 
-A Nikto result is not automatically proof of a vulnerability. Findings should be manually verified and interpreted in the context of the target environment.
-
-
----
-
-📸 Screenshots
-
-1. Nikto Installation
-
-Nikto Installation
-
-2. Nikto Version & Help
-
-Nikto Help
-
-3. Example Scan Output
-
-Nikto Scan
+Nikto Scan Output
 
 
 ---
 
-🎯 Learning Objectives
+📊 Part 5 — Understanding the Results
 
-This exercise demonstrates:
+Nikto results should be interpreted carefully.
 
-1. Installing Nikto on Kali Linux.
+A scanner finding does not automatically mean that a vulnerability exists.
 
+Security professionals should manually verify findings and consider:
 
-2. Checking the installed Nikto version.
+Server configuration
 
+Application behavior
 
-3. Understanding Nikto command-line options.
+HTTP response codes
 
+Software versions
 
-4. Performing a basic web-server assessment in an authorized environment.
-
-
-5. Reading and interpreting scanner output.
-
-
-6. Understanding that automated scanner findings require manual verification.
-
+Whether the finding is relevant to the environment
 
 
 
 ---
 
-🧠 What is Nikto?
+🧠 What I Learned
 
-Nikto is a web server scanner designed to identify potentially interesting or insecure web-server configurations and files.
+Through this practical, I learned:
 
-It can help security professionals during the reconnaissance and vulnerability-assessment stages of an authorized security assessment.
+How to install Nikto on Kali Linux.
+
+How to verify the installation.
+
+How to access Nikto's help menu.
+
+How web server scanning works.
+
+How to read basic Nikto output.
+
+Why automated security findings require manual verification.
+
+The importance of authorization during security testing.
+
 
 
 ---
@@ -174,7 +236,9 @@ It can help security professionals during the reconnaissance and vulnerability-a
 📂 Project Structure
 
 nikto-web-server-scan/
+│
 ├── README.md
+│
 ├── 1000521170.jpg
 ├── 1000521171.jpg
 └── 1000521172.jpg
@@ -184,18 +248,22 @@ nikto-web-server-scan/
 
 ⚠️ Responsible Use
 
-Use Nikto only for:
+This project is intended for educational and authorized security testing.
+
+Use Nikto only against:
 
 Your own websites
 
-Local test servers
+Your own servers
+
+Local test environments
 
 CTF/lab environments
 
-Systems where you have written authorization
+Systems for which you have explicit permission
 
 
-Unauthorized scanning may violate laws, terms of service, or organizational policies.
+Unauthorized security scanning may violate laws, policies, or terms of service.
 
 
 ---
@@ -204,4 +272,89 @@ Unauthorized scanning may violate laws, terms of service, or organizational poli
 
 PsychoMods
 
-Cybersecurity learning & security research projects.
+Cybersecurity Learning & Security Research
+
+
+---
+
+⭐ If you found this project useful, consider giving the repository a star.
+
+## 2. Commit it
+
+After pasting:
+
+**Scroll to bottom → Commit changes**
+
+Use:
+
+```text
+Update README with Nikto security testing documentation
+
+Then tap Commit changes.
+
+
+---
+
+3. Upload your screenshots
+
+Go back to the repository homepage.
+
+Tap:
+
+Add file → Upload files
+
+Upload your three screenshots.
+
+Make sure the names are exactly:
+
+1000521170.jpg
+1000521171.jpg
+1000521172.jpg
+
+Then:
+
+Commit changes
+
+
+---
+
+4. Your README will look like this
+
+The final structure will be:
+
+🔎 Nikto Web Server Security Scanning
+        ↓
+🏷️ Badges
+        ↓
+📌 Project Overview
+        ↓
+🎯 Objectives
+        ↓
+🛠️ Tools & Technologies
+        ↓
+🛡️ Scope & Authorization
+        ↓
+🧪 Part 1 — Installation
+        ↓
+📸 Screenshot
+        ↓
+🔍 Part 2 — Version
+        ↓
+📸 Screenshot
+        ↓
+📖 Part 3 — Help & Options
+        ↓
+🌐 Part 4 — Web Server Scan
+        ↓
+📸 Scan Screenshot
+        ↓
+📊 Results
+        ↓
+🧠 What I Learned
+        ↓
+📂 Project Structure
+        ↓
+⚠️ Responsible Use
+        ↓
+👨‍💻 Author
+
